@@ -18,8 +18,13 @@ public class Main {
 		BufferedImage edgeImage = canny.getEdgesImage();        
         ImageIO.write(edgeImage, "jpg", new File("target//edge.jpg"));
 
+        ImageTraverser traverser = new ImageTraverser();
+
         Inverter inverter = new Inverter();
-        inverter.invert(lenaImage);
+        traverser.addCallback(inverter);
+        traverser.traverse(lenaImage);
+
+//        inverter.invert(lenaImage);
 
 	}
 
