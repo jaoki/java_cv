@@ -41,7 +41,7 @@ public class ImageTraverser {
 	public static abstract class ImageTraverserCallback{
 		protected BufferedImage _source;
 		protected BufferedImage _result;
-		
+
 		public ImageTraverserCallback(){}
 
 		public void setSource(BufferedImage source){
